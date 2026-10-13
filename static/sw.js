@@ -1,0 +1,1 @@
+self.addEventListener('push',e=>{let d={};try{d=e.data.json()}catch{}e.waitUntil(self.registration.showNotification(d.title||'Casa Alejandro',{body:d.body||'Shift update',icon:'/static/icon.svg'}))});self.addEventListener('notificationclick',e=>{e.notification.close();e.waitUntil(clients.openWindow('/'))});

@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<h1>My payslips</h1><section class="card">{% for p in rows %}<div class="item"><div><b>{{p.start_day}} – {{p.end_day}}</b><small>Employee #{{p.user_id}} · Approved</small></div><a href="/payslip/{{p.id}}.pdf">Download PDF ↓</a></div>{% else %}<p>No approved payslips available.</p>{% endfor %}</section>{% endblock %}
